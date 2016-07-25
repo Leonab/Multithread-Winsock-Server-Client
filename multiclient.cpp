@@ -1,3 +1,4 @@
+//use as .c by removing iostream.h and replacing printf/scanf with cout/cin
 #include <windows.h>
 #include <winsock.h>
 #include <stdio.h>
