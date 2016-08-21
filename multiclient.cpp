@@ -54,7 +54,7 @@ int main()
     signal(SIGKILL,s_handle);
     signal(SIGQUIT,s_handle);
 
-    cout<<"\t\tEcho Client by KOrUPt";
+    cout<<"\t\tEcho Client";
 
     cout<<"\n\n\n\t\tEnter IP to connect to: ";
     gets(ip);

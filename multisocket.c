@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <winsock.h>
 
-// our thread for recving commands
+// our thread for receiving commands
 DWORD WINAPI receive_cmds(LPVOID lpParam)
 {
   printf("thread created\r\n");
@@ -36,12 +36,12 @@ DWORD WINAPI receive_cmds(LPVOID lpParam)
      { // greet this user
        printf("\nrecived hello cmd");
 
-       strcpy(sendData,"hello, greetz from KOrUPt\n");
+       strcpy(sendData,"hello, greetings\n");
        Sleep(10);
        send(current_client,sendData,sizeof(sendData),0);
      }
      else if(strstr(buf,"bye"))
-     { // dissconnected this user
+     { // disconnect this user
        printf("\nrecived bye cmd\n");
 
        strcpy(sendData,"cya\n");
@@ -111,7 +111,7 @@ int main()
     return 0;
  }
 
- // socket that we snedzrecv data on
+ // socket that we send & receive data on
  SOCKET client;
 
  SOCKADDR_IN from;
