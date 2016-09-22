@@ -65,7 +65,7 @@ int main()
 
 
     ser.sin_family=AF_INET;                   //IPv4 setting
-    ser.sin_port=htons(123);                    //Set the port
+    ser.sin_port=htons(123);                 //Set the port
     ser.sin_addr.s_addr=inet_addr(ip);      //Set the address we want to connect to
 
     memcpy(&addr,&ser,sizeof(SOCKADDR_IN));
